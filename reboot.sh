@@ -10,12 +10,12 @@
 # For Fedora do
 #	sudo dnf install expect
 #
-#
-#replace 'admin' with your username
+#####
+# Заменить 'admin' на логин вашего роутера
 set username admin
-#replace 'password' with your password
+# Заменить 'password' на пароль вашего роутера
 set pass password
-#replace 192.168.1.1 with your router's IP address, if it differs
+# Заменить 192.168.1.1 на IP адрес вашего роутера, если он отличается
 set host 192.168.1.1
 
 spawn telnet ${host}
@@ -27,8 +27,8 @@ expect "Password:"
 send "${pass}\r"
 
 expect -re "ZySH"
-#replace 'reboot' with whatever your router's specific command is
+# Зменить 'reboot' на любую команду перезагрузки, которую понимает ваш роутер
 send "reboot\r"
-#replace 'logout' with whatever your router's specific command is
+# Заменить 'logout' на любую команду выхода, которую понимает ваш роутер
 send "exit\r"
 expect eof

@@ -1,6 +1,6 @@
 #!/bin/bash
-#replace '8.8.8.8' with your preferred address to ping. This is a Google DNS server address which you should be able to ping successfully if you are connected to the internet.
+#Замените 8,8,8,8 на любой адрес, который хотите пинговать. Это адрес Google DNS.
 if ! /bin/ping -c 1 8.8.8.8
 then
-/home/USER/reboot.sh # replace 'user' with your username
+/home/USER/reboot.sh # Заменить USER на имя своего пользователя
 fi
